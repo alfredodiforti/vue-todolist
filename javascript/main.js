@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         activity: '',
-        list: ['chiamare luca', 'fare esercizi', 'fare la spesa'
+        list: ['chiamare Luca', 'fare esercizi', 'fare la spesa'
         ],
     },
     methods: {
