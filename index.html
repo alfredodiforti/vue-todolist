@@ -8,7 +8,7 @@
     <!-- link css -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet"> 
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <title>vue-todolist</title>
@@ -16,18 +16,18 @@
 <body>
     <div id="app">
         <section class="logo">
-            <h1>Daily list</h1>
+            <h1>Daily<span>list</span></h1>
         </section>
         <section class="imput">
             <input type="text" placeholder="write your activity" v-model="activity" @keyup.enter="aggiungi">
-            <button @click="aggiungi">add</button>
+            <button @click="aggiungi">+</button>
         </section>
         <section class="list">
             <div class="container">
                 <ul v-if="(list.length > 0)">
                     <li v-for='(attivita, indice) in list'><p>{{ attivita }}</p> <span><i @click='remove(indice)' class="fas fa-times"></i></span></li>
                 </ul>
-                <h2 v-else="">add activities</h2>
+                <h2 v-else="">no more activities for today <span>!</span></h2>
             </div>
         </section>
     </div>

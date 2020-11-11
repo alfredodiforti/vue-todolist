@@ -7,7 +7,12 @@ const app = new Vue({
     },
     methods: {
         aggiungi() {
-            this.list.push(this.activity);            
+            if (this.activity.trim() !== '') {
+                this.list.push(this.activity);
+            this.activity = '';
+
+            }
+                        
         },
         remove(indice) {
             this.list.splice(indice, 1);
